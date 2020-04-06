@@ -1,0 +1,93 @@
+<DOCTYPE! HTML>
+<html>
+
+<head>
+
+	<style>
+		#special {
+		background-color:yellow;
+		color:blue;
+				}
+
+	</style>
+
+	<script>
+
+		alert("My first Script!");  //First Alert
+
+		function ButtonAlert () {  //Function for Second Alert
+			alert("My first Script!");
+								}
+								
+		document.write("My Second Script!");   //doucument write
+		
+		function Button_inner() {  //innerHTML
+				document.getElementById("special").innerHTML="My Thrid Script!";
+								}
+		
+		console.log("My Fourth Script!")    //console.log
+	</script>
+
+
+</head>
+
+<body>
+	<h1>Today we will learn about how to "print" data to a HTML page. </h1>
+	<br>
+
+	<!-- alert() Section --------------------------------------  -->
+	<h2>Use an alert().</h2>
+		
+		One way to do this is with using windows.alert() or alert().  
+		
+		<br>
+		
+		<p>You will notice the alert appeared before the page loaded.  In order to correct
+		this you can using a button and a function which we will discuss later.	
+		</p>
+		
+		<button onclick="ButtonAlert()">Click Here to Do An Alert</button>
+
+			
+
+	<!-- document.write() Section --------------------------------------  -->
+	<h2>Use document.write().</h2>
+		<p>One way to do this is with using doucment.write(). </p>
+		
+
+
+	<!-- innerHTML() Section --------------------------------------  -->
+	<h2>Use innerHTML().</h2>
+		
+		<p>Here we will use innerHTML() display something on our web page.  This is a
+		very effective way because the coder is able to place the display exactly where
+		he or she wants by using document.getElementById(). In the <span id="special">
+		The font will start to change.  Using the document
+		.getElementById("").innerHTML("")</span> will add the text where the id is.
+		You will see that the entire text changes.  Usually you will run this off a button
+		otherwise it will write it over before the user has a chance to see the original 
+		text.
+		</p>
+		
+	
+		<button onclick="Button_inner()">Click here to do an .innerHTML</button>
+		
+			
+	<!-- console.log() Section --------------------------------------  -->
+	<h2>console.log().</h2>
+	
+		<p>Here we will use console.log() to display in the console log.  You can press
+		F12 to access the log.  This can be a great debugging tool
+		</p>
+	
+		<script>document.write("The sum is ",10+5); </script>
+		<br>
+		<button onclick="ButtonDocumentWrite()">Click Here to Document Write After the Page is Loaded</button>
+
+			<script>
+
+				function ButtonDocumentWrite () {
+					document.write("This is what happens when I document.write after the page is loaded.  It deletes everything on the page.");
+								}
+			</script>
+</html>
